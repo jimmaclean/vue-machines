@@ -1,0 +1,8 @@
+$var: blue;
+body {
+    background-color: $var;
+}
+
+.unused {
+    display: inline;
+}
