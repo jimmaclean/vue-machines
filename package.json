@@ -15,5 +15,19 @@
   "bugs": {
     "url": "https://github.com/jimmaclean/vue-machines/issues"
   },
-  "homepage": "https://github.com/jimmaclean/vue-machines#readme"
+  "homepage": "https://github.com/jimmaclean/vue-machines#readme",
+  "dependencies": {
+    "foundation-sites": "^6.5.3",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "css-loader": "^3.0.0",
+    "mini-css-extract-plugin": "^0.7.0",
+    "node-sass": "^4.12.0",
+    "purgecss-webpack-plugin": "^1.5.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6"
+  }
 }
