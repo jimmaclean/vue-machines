@@ -11,7 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: 'app.js'
   },
-  mode: 'production',
+  mode: 'development',
   module: {
       rules: [{
               test: /\.scss$/,
@@ -22,14 +22,21 @@ module.exports = {
             ]},
           
       ]},
-  plugins: [new HtmlWebpackPlugin({
-    template: 'src/index.html',
-    title: 'Vue Machines',
-  }),
-  new MiniCssExtractPlugin({
-    filename: 'main.css'
-  }),
-  new PurgecssPlugin({
-    paths: glob.sync(`${path.join(__dirname, 'src')}/**/*`,  { nodir: true }),
-  })]
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'src/index.html',
+            title: 'Vue Machines',
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'main.css'
+        }),
+    //   new PurgecssPlugin({
+    //     paths: glob.sync(`${path.join(__dirname, 'src')}/**/*`,  { nodir: true }),
+    //   })
+    ],
+    resolve: {
+        alias: {
+          'vue$': 'vue/dist/vue.esm.js'
+        }
+    }
 };
